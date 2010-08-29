@@ -1,4 +1,4 @@
-#Fri Aug 27 17:34:45 CEST 2010
+#Sun Aug 29 19:16:36 CEST 2010
 com.powerflasher.fdt.core.CompatiblePlayers=External_SWF_Viewer\:Browser\:Standalone_Flash_Player
 com.powerflasher.fdt.core.CompilerArguments=-static-link-runtime-shared-libraries\=true\n-target-player\={playerVersion}\n-library-path+\="{flexSDK}/frameworks/locale/en_US"
 com.powerflasher.fdt.core.DefaultOutputFolder=assets

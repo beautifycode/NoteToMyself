@@ -1,5 +1,6 @@
 package components {
 	import flash.text.TextFieldType;
+
 	import events.NoteEvent;
 
 	import com.greensock.TweenLite;
@@ -9,41 +10,18 @@ package components {
 	import flash.events.FocusEvent;
 	import flash.events.MouseEvent;
 	import flash.text.TextField;
-	
-
-	
-	
-	
-
-	
-	
-	
-
-	
-	
-	
-	
-
-	
-	
-
-	
-	
 
 	/**
 	 * @author Marvin
 	 */
-	 
 	TweenPlugin.activate([AutoAlphaPlugin]);
-
 	// carrying most of the note's skills
 	public class Note extends NoteAsset {
-		public var id:int;
-		public var status:int;
-
-		private var _content:String;
-		private var _creationTime:String;
-		private var _creationDate:String;
+		public var id : int;
+		public var status : int;
+		private var _content : String;
+		private var _creationTime : String;
+		private var _creationDate : String;
 
 		public function Note() {
 			startupAnimation();
@@ -61,15 +39,13 @@ package components {
 
 		private function setupFunctionality():void {
 			noteIcon.buttonMode = true;
-			
+
 			noteTF.content.addEventListener(FocusEvent.FOCUS_OUT, onFocusOut);
-			
+
 			noteDelBtn.buttonMode = true;
 			noteDelBtn.addEventListener(MouseEvent.CLICK, onDelBtnClick);
 		}
 
-		
-		
 		private function fadeoutAnimation():void {
 			TweenLite.to(this, 1, {autoAlpha:0, onComplete:removeFunctionality});
 		}
@@ -79,32 +55,30 @@ package components {
 				this.status = 0;
 				noteTF.content.type = TextFieldType.DYNAMIC;
 
-				
-				var deleteEvent:NoteEvent = new NoteEvent(NoteEvent.DELETE_NOTE, true, false);
+				var deleteEvent : NoteEvent = new NoteEvent(NoteEvent.DELETE_NOTE, true, false);
 				deleteEvent.data = this.id;
 				dispatchEvent(deleteEvent);
 			} else {
-				var destroyEvent:NoteEvent = new NoteEvent(NoteEvent.DESTROY_NOTE, true, false);
+				var destroyEvent : NoteEvent = new NoteEvent(NoteEvent.DESTROY_NOTE, true, false);
 				destroyEvent.data = this.id;
 				dispatchEvent(destroyEvent);
 
 				noteTF.content.removeEventListener(FocusEvent.FOCUS_OUT, onFocusOut);
-				noteDelBtn.removeEventListener(MouseEvent.CLICK, onDelBtnClick);				
+				noteDelBtn.removeEventListener(MouseEvent.CLICK, onDelBtnClick);
 			}
 		}
 
-		private function onDelBtnClick(event:MouseEvent):void {
+		private function onDelBtnClick(event : MouseEvent):void {
 			fadeoutAnimation();
 		}
 
-		
-		private function onFocusOut(event:FocusEvent):void {
-			var noteData:Object = new Object();
+		private function onFocusOut(event : FocusEvent):void {
+			var noteData : Object = new Object();
 			noteData.noteID = this.id;
 			noteData.noteStatus = this.status;
 			noteData.noteBody = noteTF.content.text;
-			
-			var editNoteEvent:NoteEvent = new NoteEvent(NoteEvent.EDIT_NOTE, false, false);
+
+			var editNoteEvent : NoteEvent = new NoteEvent(NoteEvent.EDIT_NOTE, false, false);
 			editNoteEvent.data = noteData;
 			dispatchEvent(editNoteEvent);
 		}
@@ -114,13 +88,13 @@ package components {
 			return _content;
 		}
 
-		public function set content(content:String):void {
+		public function set content(content : String):void {
 			_content = content;
-			if(_content) noteTF.content.text = content;
+			if(_content)
+				noteTF.content.text = content;
 		}
 
-		
-		public function set creationTime(creationTime:String):void {
+		public function set creationTime(creationTime : String):void {
 			_creationTime = creationTime;
 			noteTime.timeTF.text = _creationTime;
 		}
@@ -129,9 +103,10 @@ package components {
 			return _creationDate;
 		}
 
-		public function set creationDate(creationDate:String):void {
+		public function set creationDate(creationDate : String):void {
 			_creationDate = creationDate;
-			if(_creationDate) noteDate.content.text = _creationDate;
+			if(_creationDate)
+				noteDate.content.text = _creationDate;
 		}
 	}
 }
