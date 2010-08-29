@@ -1,7 +1,9 @@
 == Author ==
+
 Marvin Blase
 
 == Contributers ==
+
 Francis Varga
 
 == License ==
