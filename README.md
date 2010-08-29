@@ -1,12 +1,15 @@
-== Author ==
+Author
+=================
+__Marvin Blase__
 
-Marvin Blase
+Contributers
+============================
 
-== Contributers ==
+[__Francis Varga__](http://varga-multimedia.com "Francis Varga Blog")
 
-Francis Varga
+License
+=======================
 
-== License ==
 Originaltext
 Deutsche Übersetzung
 Copyright (c) <2010> <copyright holders>
