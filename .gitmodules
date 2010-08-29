@@ -4,3 +4,6 @@
 [submodule "submodules/swift"]
 	path = submodules/swift
 	url = http://github.com/tschneidereit/SwiftSuspenders.git
+[submodule "submodules/tweenLite"]
+	path = submodules/tweenLite
+	url = git://github.com/FrancisVarga/as3TweenLite.git
