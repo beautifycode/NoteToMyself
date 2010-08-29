@@ -53,6 +53,10 @@ package {
 		}
 
 		override public function startup():void {
+<<<<<<< HEAD
+=======
+			
+>>>>>>> 0045578d4b88322735885e71b7537e34c560a7eb
 			// services
 			injector.mapSingleton(SharedObjectService);
 			injector.mapSingleton(DatabaseService);

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #Sun Aug 29 19:16:36 CEST 2010
+=======
+#Fri Aug 27 17:34:45 CEST 2010
+>>>>>>> 0045578d4b88322735885e71b7537e34c560a7eb
 com.powerflasher.fdt.core.CompatiblePlayers=External_SWF_Viewer\:Browser\:Standalone_Flash_Player
 com.powerflasher.fdt.core.CompilerArguments=-static-link-runtime-shared-libraries\=true\n-target-player\={playerVersion}\n-library-path+\="{flexSDK}/frameworks/locale/en_US"
 com.powerflasher.fdt.core.DefaultOutputFolder=assets

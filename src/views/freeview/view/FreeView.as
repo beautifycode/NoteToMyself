@@ -109,7 +109,7 @@ package views.freeview.view {
 			} else {
 				var switchViewEvent:ViewEvent = new ViewEvent(ViewEvent.SWITCH_TO_TRASHVIEW, true, false);
 				switchViewEvent.data = "trashview";
-//				dispatchEvent(switchViewEvent);
+				dispatchEvent(switchViewEvent);
 			}
 		}
 
