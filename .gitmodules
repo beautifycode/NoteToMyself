@@ -7,3 +7,6 @@
 [submodule "submodules/tweenLite"]
 	path = submodules/tweenLite
 	url = git://github.com/FrancisVarga/as3TweenLite.git
+[submodule "submodules/corelib"]
+	path = submodules/corelib
+	url = git://github.com/mikechambers/as3corelib.git
